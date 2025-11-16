@@ -1,0 +1,228 @@
+{
+ "actions": [],
+ "autoname": "field:title",
+ "creation": "2025-11-16 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "offer_type",
+  "column_break_2",
+  "priority",
+  "stacking_rule",
+  "status",
+  "section_break_6",
+  "booking_window_from",
+  "booking_window_to",
+  "column_break_9",
+  "payment_deadline",
+  "section_break_11",
+  "stay_date_from",
+  "stay_date_to",
+  "section_break_14",
+  "discount_type",
+  "discount_value",
+  "column_break_17",
+  "applies_to_room_types",
+  "applies_to_boards",
+  "section_break_20",
+  "applies_to_periods",
+  "applies_to_markets",
+  "section_break_23",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "offer_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Offer Type",
+   "options": "EBD\nLong Stay\nFree Night\nPromo Code\nMarket Special",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "50",
+   "description": "Higher priority overrides contract rates",
+   "fieldname": "priority",
+   "fieldtype": "Int",
+   "label": "Priority"
+  },
+  {
+   "default": "exclusive",
+   "fieldname": "stacking_rule",
+   "fieldtype": "Select",
+   "label": "Stacking Rule",
+   "options": "can stack\nexclusive"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nActive\nExpired\nArchived"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "Booking Window"
+  },
+  {
+   "fieldname": "booking_window_from",
+   "fieldtype": "Date",
+   "label": "Booking From"
+  },
+  {
+   "fieldname": "booking_window_to",
+   "fieldtype": "Date",
+   "label": "Booking To"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_deadline",
+   "fieldtype": "Date",
+   "label": "Payment Deadline"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break",
+   "label": "Stay Dates"
+  },
+  {
+   "fieldname": "stay_date_from",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Stay From",
+   "reqd": 1
+  },
+  {
+   "fieldname": "stay_date_to",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Stay To",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break",
+   "label": "Discount"
+  },
+  {
+   "fieldname": "discount_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Discount Type",
+   "options": "Percent\nFixed"
+  },
+  {
+   "fieldname": "discount_value",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Discount Value"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Comma-separated room type codes",
+   "fieldname": "applies_to_room_types",
+   "fieldtype": "Small Text",
+   "label": "Applies to Room Types"
+  },
+  {
+   "description": "Comma-separated boards",
+   "fieldname": "applies_to_boards",
+   "fieldtype": "Small Text",
+   "label": "Applies to Boards"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break",
+   "label": "Applicability"
+  },
+  {
+   "description": "Comma-separated period labels",
+   "fieldname": "applies_to_periods",
+   "fieldtype": "Small Text",
+   "label": "Applies to Periods"
+  },
+  {
+   "description": "Comma-separated markets",
+   "fieldname": "applies_to_markets",
+   "fieldtype": "Small Text",
+   "label": "Applies to Markets"
+  },
+  {
+   "fieldname": "section_break_23",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-16 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "MN Hotel Rates",
+ "name": "MN Special Offer",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

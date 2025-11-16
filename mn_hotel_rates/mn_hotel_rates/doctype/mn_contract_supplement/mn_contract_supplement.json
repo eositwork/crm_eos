@@ -1,0 +1,123 @@
+{
+ "actions": [],
+ "creation": "2025-11-16 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "amount",
+  "column_break_2",
+  "per_scope",
+  "is_mandatory",
+  "section_break_5",
+  "board_relation",
+  "applies_to_periods",
+  "section_break_8",
+  "age_from",
+  "age_to",
+  "discount_pct",
+  "section_break_12",
+  "valid_on_dates",
+  "conditions"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Supplement Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "per_scope",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Per Scope",
+   "options": "Per Person\nPer Room\nPer Stay\nPer Night"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_mandatory",
+   "fieldtype": "Check",
+   "label": "Is Mandatory"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break",
+   "label": "Applicability"
+  },
+  {
+   "description": "Which board types this supplement applies to",
+   "fieldname": "board_relation",
+   "fieldtype": "Small Text",
+   "label": "Board Relation"
+  },
+  {
+   "description": "Link to specific period labels (comma-separated)",
+   "fieldname": "applies_to_periods",
+   "fieldtype": "Small Text",
+   "label": "Applies to Periods"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Age & Discounts"
+  },
+  {
+   "fieldname": "age_from",
+   "fieldtype": "Int",
+   "label": "Age From"
+  },
+  {
+   "fieldname": "age_to",
+   "fieldtype": "Int",
+   "label": "Age To"
+  },
+  {
+   "description": "Discount percentage for children",
+   "fieldname": "discount_pct",
+   "fieldtype": "Float",
+   "label": "Discount %"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break",
+   "label": "Conditions"
+  },
+  {
+   "description": "Specific dates (JSON array or comma-separated)",
+   "fieldname": "valid_on_dates",
+   "fieldtype": "Small Text",
+   "label": "Valid on Dates"
+  },
+  {
+   "fieldname": "conditions",
+   "fieldtype": "Small Text",
+   "label": "Conditions"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-11-16 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "MN Hotel Rates",
+ "name": "MN Contract Supplement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

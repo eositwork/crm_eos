@@ -1,0 +1,79 @@
+{
+ "actions": [],
+ "creation": "2025-11-16 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "room_type_ref",
+  "view",
+  "column_break_2",
+  "occupancy_min",
+  "occupancy_max",
+  "min_charge_occupancy",
+  "column_break_6",
+  "features"
+ ],
+ "fields": [
+  {
+   "fieldname": "room_type_ref",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Room Type",
+   "options": "Hotel Room Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "view",
+   "fieldtype": "Select",
+   "label": "View",
+   "options": "\nSea View\nPool View\nGarden View\nCity View\nMountain View\nLake View"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "occupancy_min",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Occupancy Min"
+  },
+  {
+   "default": "2",
+   "fieldname": "occupancy_max",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Occupancy Max"
+  },
+  {
+   "description": "Minimum occupancy for full charge (e.g., 2 for DBL room)",
+   "fieldname": "min_charge_occupancy",
+   "fieldtype": "Int",
+   "label": "Min Charge Occupancy"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Comma-separated tags: Balcony, Bathtub, etc.",
+   "fieldname": "features",
+   "fieldtype": "Small Text",
+   "label": "Features"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-11-16 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "MN Hotel Rates",
+ "name": "MN Contract Room Type",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

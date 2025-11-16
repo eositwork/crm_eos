@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "creation": "2025-11-16 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "period",
+  "room_type",
+  "column_break_2",
+  "board",
+  "occupancy_base",
+  "section_break_5",
+  "unit_price_net",
+  "column_break_7",
+  "uom",
+  "per",
+  "section_break_10",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "period",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Period",
+   "reqd": 1
+  },
+  {
+   "fieldname": "room_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Room Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "board",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Board",
+   "options": "RO\nBB\nHB\nFB\nAI\nUAI",
+   "reqd": 1
+  },
+  {
+   "description": "Base occupancy for this price (e.g., 2 for DBL)",
+   "fieldname": "occupancy_base",
+   "fieldtype": "Int",
+   "label": "Occupancy Base"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "unit_price_net",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Unit Price (Net)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Per Person",
+   "fieldname": "uom",
+   "fieldtype": "Select",
+   "label": "UOM",
+   "options": "Per Person\nPer Room"
+  },
+  {
+   "default": "Per Day",
+   "fieldname": "per",
+   "fieldtype": "Select",
+   "label": "Per",
+   "options": "Per Day\nPer Stay"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-11-16 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "MN Hotel Rates",
+ "name": "MN Contract Tariff",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

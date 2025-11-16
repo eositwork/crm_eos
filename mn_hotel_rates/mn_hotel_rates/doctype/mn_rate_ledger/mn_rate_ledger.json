@@ -1,0 +1,142 @@
+{
+ "actions": [],
+ "autoname": "format:LEDGER-{order_name}-{order_row}",
+ "creation": "2025-11-16 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 0,
+ "engine": "InnoDB",
+ "field_order": [
+  "order_doctype",
+  "order_name",
+  "order_row",
+  "column_break_3",
+  "mn_rate",
+  "applied_at",
+  "section_break_6",
+  "unit_price_used",
+  "quantity",
+  "total_row_amount",
+  "column_break_10",
+  "snapshot_hash"
+ ],
+ "fields": [
+  {
+   "fieldname": "order_doctype",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Order DocType",
+   "options": "Quotation\nSales Order\nSales Invoice",
+   "reqd": 1
+  },
+  {
+   "fieldname": "order_name",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Order",
+   "options": "order_doctype",
+   "reqd": 1
+  },
+  {
+   "fieldname": "order_row",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Order Row",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mn_rate",
+   "fieldtype": "Link",
+   "label": "MN Rate",
+   "options": "MN Rate",
+   "reqd": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "applied_at",
+   "fieldtype": "Datetime",
+   "label": "Applied At",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "Amounts"
+  },
+  {
+   "fieldname": "unit_price_used",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Unit Price Used",
+   "reqd": 1
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Quantity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_row_amount",
+   "fieldtype": "Currency",
+   "label": "Total Row Amount"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Hash of rate snapshot at time of application",
+   "fieldname": "snapshot_hash",
+   "fieldtype": "Data",
+   "label": "Snapshot Hash",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 0,
+ "links": [],
+ "modified": "2025-11-16 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "MN Hotel Rates",
+ "name": "MN Rate Ledger",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,338 @@
+{
+ "actions": [],
+ "autoname": "field:contract_no",
+ "creation": "2025-11-16 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "contract_no",
+  "hotel",
+  "status",
+  "column_break_3",
+  "currency",
+  "rate_basis_uom",
+  "rate_basis_period",
+  "base_board",
+  "section_break_8",
+  "effective_from",
+  "effective_to",
+  "column_break_11",
+  "min_length_of_stay_global",
+  "margin_pct_default",
+  "section_break_14",
+  "applicable_markets",
+  "section_break_16",
+  "notes",
+  "column_break_18",
+  "attachments",
+  "section_break_20",
+  "periods",
+  "section_break_22",
+  "room_types",
+  "section_break_24",
+  "tariffs",
+  "section_break_26",
+  "supplements",
+  "section_break_28",
+  "occupancy_rules",
+  "section_break_30",
+  "cancellation_policies",
+  "section_break_32",
+  "checkin_time",
+  "checkout_time",
+  "column_break_35",
+  "prepayment_required",
+  "deadline_days_before_arrival",
+  "payment_notes",
+  "section_break_39",
+  "inclusions"
+ ],
+ "fields": [
+  {
+   "fieldname": "contract_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Contract No",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "hotel",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Hotel",
+   "options": "Hotel",
+   "reqd": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nActive\nArchived",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "EUR",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "default": "Per Person",
+   "fieldname": "rate_basis_uom",
+   "fieldtype": "Select",
+   "label": "Rate Basis UOM",
+   "options": "Per Person\nPer Room"
+  },
+  {
+   "default": "Per Day",
+   "fieldname": "rate_basis_period",
+   "fieldtype": "Select",
+   "label": "Rate Basis Period",
+   "options": "Per Day\nPer Stay"
+  },
+  {
+   "default": "BB",
+   "fieldname": "base_board",
+   "fieldtype": "Select",
+   "label": "Base Board",
+   "options": "RO\nBB\nHB\nFB\nAI\nUAI"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Validity"
+  },
+  {
+   "fieldname": "effective_from",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Effective From",
+   "reqd": 1
+  },
+  {
+   "fieldname": "effective_to",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Effective To",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "description": "Default minimum length of stay",
+   "fieldname": "min_length_of_stay_global",
+   "fieldtype": "Int",
+   "label": "Min LOS (Global)"
+  },
+  {
+   "default": "15",
+   "description": "Default margin percentage for rate calculations",
+   "fieldname": "margin_pct_default",
+   "fieldtype": "Float",
+   "label": "Margin % (Default)"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break",
+   "label": "Markets"
+  },
+  {
+   "description": "Comma-separated: Eastern, Israel, Middle East, etc.",
+   "fieldname": "applicable_markets",
+   "fieldtype": "Small Text",
+   "label": "Applicable Markets"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break",
+   "label": "Notes & Attachments"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Attach",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break",
+   "label": "Periods"
+  },
+  {
+   "fieldname": "periods",
+   "fieldtype": "Table",
+   "label": "Periods",
+   "options": "MN Contract Period"
+  },
+  {
+   "fieldname": "section_break_22",
+   "fieldtype": "Section Break",
+   "label": "Room Types"
+  },
+  {
+   "fieldname": "room_types",
+   "fieldtype": "Table",
+   "label": "Room Types",
+   "options": "MN Contract Room Type"
+  },
+  {
+   "fieldname": "section_break_24",
+   "fieldtype": "Section Break",
+   "label": "Tariffs"
+  },
+  {
+   "fieldname": "tariffs",
+   "fieldtype": "Table",
+   "label": "Tariffs",
+   "options": "MN Contract Tariff"
+  },
+  {
+   "fieldname": "section_break_26",
+   "fieldtype": "Section Break",
+   "label": "Supplements"
+  },
+  {
+   "fieldname": "supplements",
+   "fieldtype": "Table",
+   "label": "Supplements",
+   "options": "MN Contract Supplement"
+  },
+  {
+   "fieldname": "section_break_28",
+   "fieldtype": "Section Break",
+   "label": "Occupancy Rules"
+  },
+  {
+   "fieldname": "occupancy_rules",
+   "fieldtype": "Table",
+   "label": "Occupancy Rules",
+   "options": "MN Contract Occupancy Rule"
+  },
+  {
+   "fieldname": "section_break_30",
+   "fieldtype": "Section Break",
+   "label": "Policies"
+  },
+  {
+   "fieldname": "cancellation_policies",
+   "fieldtype": "Table",
+   "label": "Cancellation Policies",
+   "options": "MN Contract Cancellation Policy"
+  },
+  {
+   "fieldname": "section_break_32",
+   "fieldtype": "Section Break",
+   "label": "Check-in/out & Payment"
+  },
+  {
+   "default": "14:00:00",
+   "fieldname": "checkin_time",
+   "fieldtype": "Time",
+   "label": "Check-in Time"
+  },
+  {
+   "default": "12:00:00",
+   "fieldname": "checkout_time",
+   "fieldtype": "Time",
+   "label": "Check-out Time"
+  },
+  {
+   "fieldname": "column_break_35",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "prepayment_required",
+   "fieldtype": "Check",
+   "label": "Prepayment Required"
+  },
+  {
+   "fieldname": "deadline_days_before_arrival",
+   "fieldtype": "Int",
+   "label": "Deadline (Days Before)"
+  },
+  {
+   "fieldname": "payment_notes",
+   "fieldtype": "Small Text",
+   "label": "Payment Notes"
+  },
+  {
+   "fieldname": "section_break_39",
+   "fieldtype": "Section Break",
+   "label": "Inclusions"
+  },
+  {
+   "fieldname": "inclusions",
+   "fieldtype": "Table",
+   "label": "Inclusions",
+   "options": "MN Contract Inclusion"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-16 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "MN Hotel Rates",
+ "name": "MN Contract",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

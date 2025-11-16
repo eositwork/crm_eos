@@ -1,0 +1,331 @@
+{
+ "actions": [],
+ "autoname": "format:RATE-{service_ref}-{####}",
+ "creation": "2025-11-16 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "service_type",
+  "service_ref",
+  "room_type_ref",
+  "column_break_3",
+  "region_district",
+  "city",
+  "section_break_6",
+  "date_from",
+  "date_to",
+  "column_break_9",
+  "effective_from",
+  "effective_to",
+  "section_break_12",
+  "board",
+  "occupancy_class",
+  "column_break_15",
+  "uom",
+  "per",
+  "is_supplement",
+  "supplement_name",
+  "section_break_20",
+  "rate_type",
+  "channel",
+  "agent_ref",
+  "section_break_24",
+  "base_cost",
+  "net_price",
+  "gross_price",
+  "column_break_28",
+  "margin_pct",
+  "commission_pct",
+  "section_break_31",
+  "release_days",
+  "min_length_of_stay",
+  "stop_sale",
+  "column_break_35",
+  "priority",
+  "source",
+  "source_contract",
+  "section_break_39",
+  "market_segment"
+ ],
+ "fields": [
+  {
+   "default": "hotel",
+   "fieldname": "service_type",
+   "fieldtype": "Select",
+   "label": "Service Type",
+   "options": "hotel\ntransfer\nexcursion",
+   "reqd": 1
+  },
+  {
+   "fieldname": "service_ref",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Service",
+   "options": "service_type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "room_type_ref",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Room Type",
+   "options": "Hotel Room Type"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "region_district",
+   "fieldtype": "Data",
+   "label": "Region/District"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "Validity Period"
+  },
+  {
+   "fieldname": "date_from",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date From",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_to",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date To",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "effective_from",
+   "fieldtype": "Date",
+   "label": "Effective From"
+  },
+  {
+   "fieldname": "effective_to",
+   "fieldtype": "Date",
+   "label": "Effective To"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break",
+   "label": "Rate Details"
+  },
+  {
+   "fieldname": "board",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Board",
+   "options": "RO\nBB\nHB\nFB\nAI\nUAI"
+  },
+  {
+   "fieldname": "occupancy_class",
+   "fieldtype": "Select",
+   "label": "Occupancy Class",
+   "options": "Base\nSingle Use\n3rd Adult\n1st Child\n2nd Child\nExtra Bed\nBaby Cot\nSupplement"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Select",
+   "label": "UOM",
+   "options": "Per Person\nPer Room"
+  },
+  {
+   "fieldname": "per",
+   "fieldtype": "Select",
+   "label": "Per",
+   "options": "Per Day\nPer Stay\nPer Night"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_supplement",
+   "fieldtype": "Check",
+   "label": "Is Supplement"
+  },
+  {
+   "depends_on": "eval:doc.is_supplement==1",
+   "fieldname": "supplement_name",
+   "fieldtype": "Data",
+   "label": "Supplement Name"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break",
+   "label": "Channel & Type"
+  },
+  {
+   "default": "Net",
+   "fieldname": "rate_type",
+   "fieldtype": "Select",
+   "label": "Rate Type",
+   "options": "Cost\nNet\nGross\nSpecial"
+  },
+  {
+   "description": "Price List or channel alias",
+   "fieldname": "channel",
+   "fieldtype": "Data",
+   "label": "Channel"
+  },
+  {
+   "fieldname": "agent_ref",
+   "fieldtype": "Link",
+   "label": "Agent",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "section_break_24",
+   "fieldtype": "Section Break",
+   "label": "Pricing"
+  },
+  {
+   "fieldname": "base_cost",
+   "fieldtype": "Currency",
+   "label": "Base Cost"
+  },
+  {
+   "fieldname": "net_price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Net Price",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gross_price",
+   "fieldtype": "Currency",
+   "label": "Gross Price"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "margin_pct",
+   "fieldtype": "Float",
+   "label": "Margin %"
+  },
+  {
+   "fieldname": "commission_pct",
+   "fieldtype": "Float",
+   "label": "Commission %"
+  },
+  {
+   "fieldname": "section_break_31",
+   "fieldtype": "Section Break",
+   "label": "Conditions"
+  },
+  {
+   "default": "0",
+   "fieldname": "release_days",
+   "fieldtype": "Int",
+   "label": "Release Days"
+  },
+  {
+   "default": "1",
+   "fieldname": "min_length_of_stay",
+   "fieldtype": "Int",
+   "label": "Min Length of Stay"
+  },
+  {
+   "default": "0",
+   "fieldname": "stop_sale",
+   "fieldtype": "Check",
+   "label": "Stop Sale"
+  },
+  {
+   "fieldname": "column_break_35",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "10",
+   "fieldname": "priority",
+   "fieldtype": "Int",
+   "label": "Priority"
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Select",
+   "label": "Source",
+   "options": "contract\nspecial_offer\noverride\nmanual"
+  },
+  {
+   "depends_on": "eval:doc.source=='contract'",
+   "fieldname": "source_contract",
+   "fieldtype": "Link",
+   "label": "Source Contract",
+   "options": "MN Contract"
+  },
+  {
+   "fieldname": "section_break_39",
+   "fieldtype": "Section Break",
+   "label": "Market"
+  },
+  {
+   "fieldname": "market_segment",
+   "fieldtype": "Data",
+   "label": "Market/Segment"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-16 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "MN Hotel Rates",
+ "name": "MN Rate",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,120 @@
+{
+ "actions": [],
+ "creation": "2025-11-16 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "target",
+  "applies_to",
+  "column_break_2",
+  "charge_type",
+  "base_reference",
+  "value",
+  "section_break_6",
+  "board_dependency",
+  "age_from",
+  "age_to",
+  "column_break_10",
+  "is_free",
+  "counts_towards_capacity",
+  "section_break_13",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "target",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Target",
+   "options": "Single Use\n3rd Adult\n1st Child\n2nd Child\nExtra Bed\nBaby Cot",
+   "reqd": 1
+  },
+  {
+   "description": "Comma-separated room type labels",
+   "fieldname": "applies_to",
+   "fieldtype": "Small Text",
+   "label": "Applies To"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "charge_type",
+   "fieldtype": "Select",
+   "label": "Charge Type",
+   "options": "Percent of Base\nFixed Amount"
+  },
+  {
+   "fieldname": "base_reference",
+   "fieldtype": "Select",
+   "label": "Base Reference",
+   "options": "Adult Rate\nAvg Contract Rate\nRoom Rate"
+  },
+  {
+   "fieldname": "value",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Value"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Which boards this rule applies to",
+   "fieldname": "board_dependency",
+   "fieldtype": "Small Text",
+   "label": "Board Dependency"
+  },
+  {
+   "fieldname": "age_from",
+   "fieldtype": "Int",
+   "label": "Age From"
+  },
+  {
+   "fieldname": "age_to",
+   "fieldtype": "Int",
+   "label": "Age To"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_free",
+   "fieldtype": "Check",
+   "label": "Is Free"
+  },
+  {
+   "default": "1",
+   "description": "Does this occupant count towards room capacity?",
+   "fieldname": "counts_towards_capacity",
+   "fieldtype": "Check",
+   "label": "Counts Towards Capacity"
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-11-16 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "MN Hotel Rates",
+ "name": "MN Contract Occupancy Rule",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
