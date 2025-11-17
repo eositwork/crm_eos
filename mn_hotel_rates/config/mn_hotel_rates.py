@@ -5,6 +5,26 @@ from frappe import _
 def get_data():
 	return [
 		{
+			"label": _("Package Search"),
+			"items": [
+				{
+					"type": "doctype",
+					"name": "MN Package Search",
+					"description": _("Search for hotel packages")
+				},
+				{
+					"type": "doctype",
+					"name": "MN Package Quote",
+					"description": _("Package search results (cached)")
+				},
+				{
+					"type": "doctype",
+					"name": "MN Pre Order",
+					"description": _("Pre-orders with release time")
+				}
+			]
+		},
+		{
 			"label": _("Contracts & Rates"),
 			"items": [
 				{
@@ -46,6 +66,11 @@ def get_data():
 					"type": "doctype",
 					"name": "Hotel Room Type",
 					"description": _("Room types catalog")
+				},
+				{
+					"type": "doctype",
+					"name": "MN Transfer",
+					"description": _("Transfer services")
 				}
 			]
 		}

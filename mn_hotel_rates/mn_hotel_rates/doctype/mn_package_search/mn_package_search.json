@@ -1,0 +1,262 @@
+{
+ "actions": [],
+ "autoname": "format:PKG-SEARCH-{YYYY}-{#####}",
+ "creation": "2025-11-17 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "agent",
+  "customer",
+  "column_break_2",
+  "search_date",
+  "status",
+  "section_break_5",
+  "city",
+  "region_district",
+  "column_break_8",
+  "date_from",
+  "nights",
+  "date_to",
+  "section_break_12",
+  "adults",
+  "children",
+  "column_break_15",
+  "child_ages",
+  "section_break_17",
+  "hotel_category",
+  "board_preference",
+  "column_break_20",
+  "include_transfer",
+  "transfer_type",
+  "section_break_23",
+  "price_range_min",
+  "price_range_max",
+  "column_break_26",
+  "total_packages_found",
+  "section_break_28",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "agent",
+   "fieldtype": "Link",
+   "label": "Agent",
+   "options": "User"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "search_date",
+   "fieldtype": "Datetime",
+   "label": "Search Date",
+   "read_only": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nSearching\nCompleted\nExpired"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break",
+   "label": "Destination & Dates"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "City",
+   "reqd": 1
+  },
+  {
+   "fieldname": "region_district",
+   "fieldtype": "Data",
+   "label": "Region/District"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_from",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date From",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nights",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Nights",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_to",
+   "fieldtype": "Date",
+   "label": "Date To",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break",
+   "label": "Occupancy"
+  },
+  {
+   "default": "2",
+   "fieldname": "adults",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Adults",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "children",
+   "fieldtype": "Int",
+   "label": "Children"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.children>0",
+   "description": "Comma-separated ages (e.g., 5,8,12)",
+   "fieldname": "child_ages",
+   "fieldtype": "Data",
+   "label": "Child Ages"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break",
+   "label": "Preferences"
+  },
+  {
+   "fieldname": "hotel_category",
+   "fieldtype": "Select",
+   "label": "Hotel Category",
+   "options": "\n5 Stars\n4 Stars\n3 Stars\n2 Stars\n1 Star\nBoutique\nResort"
+  },
+  {
+   "fieldname": "board_preference",
+   "fieldtype": "Select",
+   "label": "Board Preference",
+   "options": "\nRO\nBB\nHB\nFB\nAI\nUAI"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "include_transfer",
+   "fieldtype": "Check",
+   "label": "Include Transfer"
+  },
+  {
+   "depends_on": "eval:doc.include_transfer==1",
+   "fieldname": "transfer_type",
+   "fieldtype": "Select",
+   "label": "Transfer Type",
+   "options": "Airport-Hotel-Airport\nAirport-Hotel\nHotel-Airport"
+  },
+  {
+   "fieldname": "section_break_23",
+   "fieldtype": "Section Break",
+   "label": "Results"
+  },
+  {
+   "fieldname": "price_range_min",
+   "fieldtype": "Currency",
+   "label": "Price Range Min",
+   "read_only": 1
+  },
+  {
+   "fieldname": "price_range_max",
+   "fieldtype": "Currency",
+   "label": "Price Range Max",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_packages_found",
+   "fieldtype": "Int",
+   "label": "Total Packages Found",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_28",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-17 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "MN Hotel Rates",
+ "name": "MN Package Search",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

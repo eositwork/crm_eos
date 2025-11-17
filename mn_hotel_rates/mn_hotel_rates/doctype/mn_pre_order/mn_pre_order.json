@@ -1,0 +1,376 @@
+{
+ "actions": [],
+ "autoname": "format:PRE-{YYYY}-{#####}",
+ "creation": "2025-11-17 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "package_quote",
+  "package_search",
+  "column_break_2",
+  "agent",
+  "customer",
+  "status",
+  "section_break_6",
+  "hotel",
+  "room_type",
+  "board",
+  "column_break_10",
+  "date_from",
+  "date_to",
+  "nights",
+  "section_break_14",
+  "adults",
+  "children",
+  "child_ages",
+  "section_break_18",
+  "hotel_price",
+  "transfer_price",
+  "additional_services_price",
+  "column_break_22",
+  "total_price",
+  "currency",
+  "section_break_25",
+  "created_at",
+  "release_datetime",
+  "column_break_28",
+  "warning_hours_before",
+  "warning_datetime",
+  "section_break_31",
+  "warning_sent",
+  "warning_sent_at",
+  "column_break_34",
+  "release_notification_sent",
+  "release_notification_sent_at",
+  "section_break_37",
+  "confirmed_at",
+  "confirmed_by",
+  "column_break_40",
+  "cancelled_at",
+  "cancelled_by",
+  "cancellation_reason",
+  "section_break_44",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "package_quote",
+   "fieldtype": "Link",
+   "label": "Package Quote",
+   "options": "MN Package Quote"
+  },
+  {
+   "fieldname": "package_search",
+   "fieldtype": "Link",
+   "label": "Package Search",
+   "options": "MN Package Search"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "agent",
+   "fieldtype": "Link",
+   "label": "Agent",
+   "options": "User"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Pending\nConfirmed\nCancelled\nExpired",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "Booking Details"
+  },
+  {
+   "fieldname": "hotel",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Hotel",
+   "options": "Hotel",
+   "reqd": 1
+  },
+  {
+   "fieldname": "room_type",
+   "fieldtype": "Link",
+   "label": "Room Type",
+   "options": "Hotel Room Type"
+  },
+  {
+   "fieldname": "board",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Board",
+   "options": "RO\nBB\nHB\nFB\nAI\nUAI",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_from",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date From",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_to",
+   "fieldtype": "Date",
+   "label": "Date To",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nights",
+   "fieldtype": "Int",
+   "label": "Nights"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break",
+   "label": "Occupancy"
+  },
+  {
+   "default": "2",
+   "fieldname": "adults",
+   "fieldtype": "Int",
+   "label": "Adults",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "children",
+   "fieldtype": "Int",
+   "label": "Children"
+  },
+  {
+   "fieldname": "child_ages",
+   "fieldtype": "Data",
+   "label": "Child Ages"
+  },
+  {
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break",
+   "label": "Pricing"
+  },
+  {
+   "fieldname": "hotel_price",
+   "fieldtype": "Currency",
+   "label": "Hotel Price",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "transfer_price",
+   "fieldtype": "Currency",
+   "label": "Transfer Price"
+  },
+  {
+   "default": "0",
+   "fieldname": "additional_services_price",
+   "fieldtype": "Currency",
+   "label": "Additional Services"
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Price",
+   "reqd": 1
+  },
+  {
+   "default": "EUR",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "section_break_25",
+   "fieldtype": "Section Break",
+   "label": "Release Schedule"
+  },
+  {
+   "default": "Now",
+   "fieldname": "created_at",
+   "fieldtype": "Datetime",
+   "label": "Created At",
+   "read_only": 1
+  },
+  {
+   "description": "Pre-order will be cancelled if not confirmed by this time",
+   "fieldname": "release_datetime",
+   "fieldtype": "Datetime",
+   "label": "Release Datetime",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "24",
+   "description": "Send warning notification X hours before release",
+   "fieldname": "warning_hours_before",
+   "fieldtype": "Int",
+   "label": "Warning Hours Before"
+  },
+  {
+   "fieldname": "warning_datetime",
+   "fieldtype": "Datetime",
+   "label": "Warning Datetime",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_31",
+   "fieldtype": "Section Break",
+   "label": "Notifications"
+  },
+  {
+   "default": "0",
+   "fieldname": "warning_sent",
+   "fieldtype": "Check",
+   "label": "Warning Sent"
+  },
+  {
+   "fieldname": "warning_sent_at",
+   "fieldtype": "Datetime",
+   "label": "Warning Sent At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_34",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "release_notification_sent",
+   "fieldtype": "Check",
+   "label": "Release Notification Sent"
+  },
+  {
+   "fieldname": "release_notification_sent_at",
+   "fieldtype": "Datetime",
+   "label": "Release Sent At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_37",
+   "fieldtype": "Section Break",
+   "label": "Confirmation/Cancellation"
+  },
+  {
+   "fieldname": "confirmed_at",
+   "fieldtype": "Datetime",
+   "label": "Confirmed At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "confirmed_by",
+   "fieldtype": "Link",
+   "label": "Confirmed By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_40",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cancelled_at",
+   "fieldtype": "Datetime",
+   "label": "Cancelled At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cancelled_by",
+   "fieldtype": "Link",
+   "label": "Cancelled By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cancellation_reason",
+   "fieldtype": "Select",
+   "label": "Cancellation Reason",
+   "options": "\nRelease Expired\nManual Cancellation\nCustomer Request"
+  },
+  {
+   "fieldname": "section_break_44",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-17 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "MN Hotel Rates",
+ "name": "MN Pre Order",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

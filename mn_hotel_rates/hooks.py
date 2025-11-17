@@ -109,23 +109,11 @@ doc_events = {
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"mn_hotel_rates.tasks.all"
-# 	],
-# 	"daily": [
-# 		"mn_hotel_rates.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"mn_hotel_rates.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"mn_hotel_rates.tasks.weekly"
-# 	]
-# 	"monthly": [
-# 		"mn_hotel_rates.tasks.monthly"
-# 	]
-# }
+scheduler_events = {
+	"hourly": [
+		"mn_hotel_rates.mn_hotel_rates.doctype.mn_pre_order.mn_pre_order.check_pre_order_releases"
+	]
+}
 
 # Testing
 # -------

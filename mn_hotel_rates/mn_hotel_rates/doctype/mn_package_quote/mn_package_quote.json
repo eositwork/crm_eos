@@ -1,0 +1,200 @@
+{
+ "actions": [],
+ "autoname": "format:PKG-QUOTE-{YYYY}-{#####}",
+ "creation": "2025-11-17 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "package_search",
+  "column_break_2",
+  "created_at",
+  "expires_at",
+  "status",
+  "section_break_6",
+  "city",
+  "date_from",
+  "date_to",
+  "nights",
+  "column_break_11",
+  "adults",
+  "children",
+  "hotel_category",
+  "section_break_14",
+  "items",
+  "section_break_16",
+  "price_range_min",
+  "price_range_max",
+  "column_break_19",
+  "total_packages"
+ ],
+ "fields": [
+  {
+   "fieldname": "package_search",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Package Search",
+   "options": "MN Package Search",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Now",
+   "fieldname": "created_at",
+   "fieldtype": "Datetime",
+   "label": "Created At",
+   "read_only": 1
+  },
+  {
+   "description": "Cache expires after this time",
+   "fieldname": "expires_at",
+   "fieldtype": "Datetime",
+   "label": "Expires At"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nExpired"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "Search Criteria"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City",
+   "read_only": 1
+  },
+  {
+   "fieldname": "date_from",
+   "fieldtype": "Date",
+   "label": "Date From",
+   "read_only": 1
+  },
+  {
+   "fieldname": "date_to",
+   "fieldtype": "Date",
+   "label": "Date To",
+   "read_only": 1
+  },
+  {
+   "fieldname": "nights",
+   "fieldtype": "Int",
+   "label": "Nights",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "adults",
+   "fieldtype": "Int",
+   "label": "Adults",
+   "read_only": 1
+  },
+  {
+   "fieldname": "children",
+   "fieldtype": "Int",
+   "label": "Children",
+   "read_only": 1
+  },
+  {
+   "fieldname": "hotel_category",
+   "fieldtype": "Data",
+   "label": "Hotel Category",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break",
+   "label": "Package Options"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "MN Package Quote Item"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break",
+   "label": "Summary"
+  },
+  {
+   "fieldname": "price_range_min",
+   "fieldtype": "Currency",
+   "label": "Price Range Min",
+   "read_only": 1
+  },
+  {
+   "fieldname": "price_range_max",
+   "fieldtype": "Currency",
+   "label": "Price Range Max",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_packages",
+   "fieldtype": "Int",
+   "label": "Total Packages",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-17 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "MN Hotel Rates",
+ "name": "MN Package Quote",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,135 @@
+{
+ "actions": [],
+ "creation": "2025-11-17 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "hotel",
+  "hotel_category",
+  "room_type",
+  "board",
+  "column_break_4",
+  "hotel_price_min",
+  "hotel_price_max",
+  "section_break_7",
+  "transfer_included",
+  "transfer_price",
+  "column_break_10",
+  "additional_services_price",
+  "section_break_12",
+  "total_price_min",
+  "total_price_max",
+  "section_break_15",
+  "mn_rate_ref"
+ ],
+ "fields": [
+  {
+   "fieldname": "hotel",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Hotel",
+   "options": "Hotel",
+   "reqd": 1
+  },
+  {
+   "fieldname": "hotel_category",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Hotel Category"
+  },
+  {
+   "fieldname": "room_type",
+   "fieldtype": "Link",
+   "label": "Room Type",
+   "options": "Hotel Room Type"
+  },
+  {
+   "fieldname": "board",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Board",
+   "options": "RO\nBB\nHB\nFB\nAI\nUAI"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hotel_price_min",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Hotel Price Min"
+  },
+  {
+   "fieldname": "hotel_price_max",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Hotel Price Max"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "transfer_included",
+   "fieldtype": "Check",
+   "label": "Transfer Included"
+  },
+  {
+   "depends_on": "eval:doc.transfer_included==1",
+   "fieldname": "transfer_price",
+   "fieldtype": "Currency",
+   "label": "Transfer Price"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "additional_services_price",
+   "fieldtype": "Currency",
+   "label": "Additional Services"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_price_min",
+   "fieldtype": "Currency",
+   "label": "Total Price Min",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_price_max",
+   "fieldtype": "Currency",
+   "label": "Total Price Max",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "mn_rate_ref",
+   "fieldtype": "Link",
+   "label": "MN Rate Ref",
+   "options": "MN Rate"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-11-17 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "MN Hotel Rates",
+ "name": "MN Package Quote Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

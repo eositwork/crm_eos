@@ -1,0 +1,211 @@
+{
+ "actions": [],
+ "autoname": "format:TRF-{YYYY}-{#####}",
+ "creation": "2025-11-17 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "transfer_name",
+  "transfer_type",
+  "column_break_2",
+  "status",
+  "section_break_4",
+  "region_district",
+  "city",
+  "column_break_7",
+  "from_location",
+  "to_location",
+  "section_break_10",
+  "vehicle_type",
+  "max_passengers",
+  "column_break_13",
+  "duration_minutes",
+  "distance_km",
+  "section_break_16",
+  "price_per_transfer",
+  "price_per_person",
+  "column_break_19",
+  "currency",
+  "section_break_21",
+  "description",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "transfer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Transfer Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "transfer_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Transfer Type",
+   "options": "Airport-Hotel\nHotel-Airport\nAirport-Hotel-Airport\nHotel-Hotel\nPoint to Point",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nInactive"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Location"
+  },
+  {
+   "fieldname": "region_district",
+   "fieldtype": "Data",
+   "label": "Region/District"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "City"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "from_location",
+   "fieldtype": "Data",
+   "label": "From Location"
+  },
+  {
+   "fieldname": "to_location",
+   "fieldtype": "Data",
+   "label": "To Location"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break",
+   "label": "Vehicle Details"
+  },
+  {
+   "fieldname": "vehicle_type",
+   "fieldtype": "Select",
+   "label": "Vehicle Type",
+   "options": "Sedan\nVan\nMinibus\nBus\nLuxury Car"
+  },
+  {
+   "fieldname": "max_passengers",
+   "fieldtype": "Int",
+   "label": "Max Passengers"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "duration_minutes",
+   "fieldtype": "Int",
+   "label": "Duration (Minutes)"
+  },
+  {
+   "fieldname": "distance_km",
+   "fieldtype": "Float",
+   "label": "Distance (KM)"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break",
+   "label": "Pricing"
+  },
+  {
+   "description": "Price per transfer (fixed)",
+   "fieldname": "price_per_transfer",
+   "fieldtype": "Currency",
+   "label": "Price per Transfer"
+  },
+  {
+   "description": "Price per person (variable)",
+   "fieldname": "price_per_person",
+   "fieldtype": "Currency",
+   "label": "Price per Person"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "EUR",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "section_break_21",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-17 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "MN Hotel Rates",
+ "name": "MN Transfer",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
